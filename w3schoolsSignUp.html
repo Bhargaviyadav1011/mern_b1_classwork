@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create an Account</title>
+</head>
+<body>
+    <div>
+        <h1>Create your account</h1>
+        <form action="/signup_process.php" method="post">
+            <div>
+                <label for="email">Email</label> <br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="first-name">First Name</label> <br>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <br>
+            <div>
+                <label for="last-name">Last Name</label> <br>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <br>
+            <div>
+                <label for="password">Password</label> <br>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <br>
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Email me with news and updates <br>
+                    By signing up you agree to our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>
+                </label>
+            </div>
+
+            <input type="button" value="Create account" onClick="processPassword"</button>
+        </form>
+    </div>
+</body>
+<script>
+    function processPassword(){
+        //capture the element
+        var password = document.getElementById("password");
+        password.innerHTML ="Password is empty";
+
+    }
+</script>
+</html>
